@@ -1,10 +1,14 @@
+const { normal } = require("color-blend");
+
 let page = document.querySelector(".page");
 
 let circleNumber = 5;
 
 let stylesheet = document.getElementById("style").sheet;
 
-let array = Array(3).fill(0);
+let array = Array(5).fill(0);
+
+let colors = ["#FF9900", "#FFB300", "#FFCC00", "#FFE600", "#FFFF00"];
 
 array.forEach((circle, index) => {
   console.log("test");
@@ -17,7 +21,7 @@ array.forEach((circle, index) => {
                       height: ${circleNum}00px;
                       width: ${circleNum}00px;
                       border-radius: 50%;
-                      background-color: gray;
+                      background-color: ${colors[index]};
                       position: absolute;
                       border: red solid 1px;
                       z-index: ${array.length - circleNum};
