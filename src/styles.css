@@ -1,0 +1,29 @@
+html,
+body {
+  margin: 0;
+}
+
+.page {
+  width: 100vw;
+  height: 100vh;
+  background-color: rgb(38, 38, 38);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.page > #colorPicker1,
+.page > #colorPicker2 {
+  position: absolute;
+  background: rgb(78, 78, 78);
+  border: none;
+  top: 20px;
+}
+
+.page > #colorPicker1 {
+  left: 30%;
+}
+
+.page > #colorPicker2 {
+  right: 30%;
+}
