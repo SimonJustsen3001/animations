@@ -1,0 +1,13 @@
+html,
+body {
+  margin: 0;
+}
+
+.page {
+  width: 100vw;
+  height: 100vh;
+  background-color: rgb(38, 38, 38);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
