@@ -13,8 +13,6 @@ let color2 = scaleRGB(colorPicker2.get().rgb());
 
 let colors = createBlendedArray(circleNumber);
 
-console.log(colors);
-
 createNCircles(circleNumber);
 
 colorPicker1.on("change", function (color) {
