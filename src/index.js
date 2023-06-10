@@ -1,10 +1,12 @@
-require("colorjoe/css/colorjoe.css");
-var colorjoe = require("colorjoe");
+import colorjoe from "colorjoe";
+import "colorjoe/css/colorjoe.css";
 
 var colorPicker1 = colorjoe.rgb("colorPicker1", "rgb(123, 234, 45)");
 var colorPicker2 = colorjoe.rgb("colorPicker2", "rgb(123, 100, 1)");
 
 let page = document.querySelector(".page");
+let circleWrapper = document.createElement("div");
+circleWrapper.className = "circle-wrapper";
 let circleNumber = 5;
 let stylesheet = document.getElementById("style").sheet;
 
@@ -88,8 +90,19 @@ function createNCircles(circleNumber) {
                         z-index: ${circleNumber - index};
                       }`;
     stylesheet.insertRule(circleStyle, cssRulesNum);
-    page.appendChild(circleElement);
+    circleWrapper.appendChild(circleElement);
   }
+  var circleWrapperStyle = `.circle-wrapper {
+                              display: flex;
+                              justify-content: center;
+                              align-items: center;
+                              position: absolute;
+                              width: ${circleNumber}00px;
+                              height: ${circleNumber}00px;
+                            }`;
+  cssRulesNum = stylesheet.cssRules.length;
+  stylesheet.insertRule(circleWrapperStyle, cssRulesNum);
+  page.appendChild(circleWrapper);
 }
 
 function rgbToHex(r, g, b) {
